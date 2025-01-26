@@ -59,7 +59,7 @@ Clone the repository:
 ## Configuration ⚙️
 You can customize the gestures and shortcuts by editing the configs/shortcuts.py file:
 
-python
+```python
 Copy
 shortcuts = [
     {
@@ -78,8 +78,9 @@ shortcuts = [
         'gesture': 'fist'  # Triggered by fist gesture
     }
 ]
+```
 
-Use Cases 📋
+## Use Cases 📋
 Detect Hand Gestures: The system detects hand gestures using a webcam and MediaPipe.
 
 Map Gestures to Shortcuts: Gestures are mapped to predefined shortcuts.
@@ -90,7 +91,7 @@ Handle Cooldown: A cooldown timer prevents repeated triggers.
 
 Display Feedback: Visual feedback is shown on the webcam feed.
 
-Contributing 🤝
+## Contributing 🤝
 If youre intreted to add new gestures, improve the code, or fix bugs, please follow these steps:
 
 Fork the repository.
