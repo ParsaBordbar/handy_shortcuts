@@ -4,14 +4,6 @@
 https://github.com/user-attachments/assets/d340eb60-6723-4613-afb4-446b5702fd85
 
 
-
-**Features**: Highlights the key functionalities.
-**Supported Gestures**: Lists gestures and their corresponding shortcuts.
-**How It Works**: Explains the workflow in simple terms.
-**Installation**: Provides clear steps to set up the project.
-**Configuration**: Explains how to customize gestures and shortcuts.
-
-
 Welcome to the **Handy_shortcuts**! This project allows you to control your computer using hand gestures, making it easier to launch applications, execute commands, and perform tasks without touching your keyboard or mouse. 
 I wanted it to be customable so feel free to custom it for own use cases!
 
