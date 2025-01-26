@@ -96,4 +96,5 @@ Push to the branch (git push origin feature/YourFeature).
 
 Open a pull request.
 
+## Architecture 🏗️
 if you like to read more about the architecture of this project you can read more on the doc.md file. [View Documentation](doc.md)
