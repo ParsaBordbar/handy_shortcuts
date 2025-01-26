@@ -74,4 +74,28 @@ shortcuts = [
     }
 ]
 
-if you like to read more about the architecture of this project you can read more on the doc.md file.
+Use Cases 📋
+Detect Hand Gestures: The system detects hand gestures using a webcam and MediaPipe.
+
+Map Gestures to Shortcuts: Gestures are mapped to predefined shortcuts.
+
+Trigger Shortcut Actions: The system executes shortcuts using PyAutoGUI.
+
+Handle Cooldown: A cooldown timer prevents repeated triggers.
+
+Display Feedback: Visual feedback is shown on the webcam feed.
+
+Contributing 🤝
+If youre intreted to add new gestures, improve the code, or fix bugs, please follow these steps:
+
+Fork the repository.
+
+Create a new branch (git checkout -b feature/YourFeature).
+
+Commit your changes (git commit -m 'Add some feature').
+
+Push to the branch (git push origin feature/YourFeature).
+
+Open a pull request.
+
+if you like to read more about the architecture of this project you can read more on the doc.md file. [View Documentation](doc.md)
