@@ -1,16 +1,3 @@
-1. **Architecture Section**:
-   - Explains the **core main function** and **modular extensions**.
-   - Highlights **software engineering principles** like separation of concerns, modularity, and extensibility.
-
-2. **Core Components**:
-   - Describes the role of each module (`app.py`, `utils/gestures.py`, `configs/shortcuts.py`, etc.).
-
-3. **Extensibility**:
-   - Emphasizes how new gestures and shortcuts can be added without modifying the core logic.
-
-4. **Reusability**:
-   - Highlights reusable utility functions like `get_finger_data` and `get_extended_fingers`.
-
 This project uses the architecture of extensions, meaning we have a core main function/component (main func in app)
 and the other modules are extensions of that 
 
@@ -44,7 +31,7 @@ The project follows an **extensible architecture** with a **core main function**
 +-------------------+       +-------------------+       +-------------------+
 | - video_cap       |       | - gesture_funcs   |       | - shortcuts       |
 | - hands           |       | - last_action_time|       +-------------------+
-| - mp_drawing      |       | - COOL-DOWN       |       | + get_shortcut()  |
+| - mp_drawing      |       | - COOLDOWN        |       | + get_shortcut()  |
 +-------------------+       +-------------------+       | + trigger_action()|
 | + detect_gesture()|       | + handle_gesture()|       +-------------------+
 | + draw_landmarks()|       +-------------------+
@@ -66,23 +53,39 @@ The project follows an **extensible architecture** with a **core main function**
                             | + is_fu()               |
                             +-------------------------+
 
-User -> HandDetector: Start Webcam
+```
+## Sequence Diagram
+
+User -> HandDetector: Start Webcam 
+
 HandDetector -> MediaPipe: Process Frame
+
 MediaPipe --> HandDetector: Return Hand Landmarks
+
 HandDetector -> FingerData: Get Finger Data
+
 FingerData --> HandDetector: Return Finger Landmarks
+
 HandDetector -> GestureUtils: Detect Gesture
+
 GestureUtils --> HandDetector: Return Gesture Type
+
 HandDetector -> GestureHandler: Handle Gesture
+
 GestureHandler -> ShortcutManager: Get Shortcut
+
 ShortcutManager --> GestureHandler: Return Shortcut
+
 GestureHandler -> PyAutoGUI: Trigger Action
+
 PyAutoGUI --> System: Execute Shortcut
+
 System --> User: Perform Action (e.g., Open App)
 
 
-Use Cases
-1. Detect Hand Gestures
+### Use Cases
+
+1. #### Detect Hand Gestures
 Actor: User
 
 Description: The system detects hand gestures using a webcam and MediaPipe's hand landmark model.
@@ -95,7 +98,7 @@ System captures the frame and processes it using MediaPipe.
 
 System identifies hand landmarks and maps them to gestures using get_finger_data.
 
-2. Map Gestures to Shortcuts
+2. #### Map Gestures to Shortcuts
 Actor: System
 
 Description: The system maps detected gestures to predefined shortcuts using gesture detection functions.
@@ -108,7 +111,7 @@ System looks up the gesture in the gesture_to_shortcut mapping.
 
 System retrieves the associated shortcut.
 
-3. Trigger Shortcut Actions
+3. #### Trigger Shortcut Actions
 Actor: System
 
 Description: The system triggers the mapped shortcut action using PyAutoGUI.
@@ -121,20 +124,20 @@ System uses PyAutoGUI to simulate the keyboard shortcut.
 
 System displays a confirmation message on the screen.
 
-4. Handle Cool-down
+4. #### Handle Cooldown
 Actor: System
 
-Description: The system enforces a cool-down period between gesture actions to prevent spamming.
+Description: The system enforces a cooldown period between gesture actions to prevent spamming.
 
 Flow:
 
 System detects a gesture.
 
-System checks if the cool-down period has passed since the last action.
+System checks if the cooldown period has passed since the last action.
 
-If cool-down has passed, the system triggers the action and resets the timer.
+If cooldown has passed, the system triggers the action and resets the timer.
 
-5. Display Feedback
+5. #### Display Feedback
 Actor: System
 
 Description: The system provides visual feedback on the webcam feed when a gesture is detected and an action is triggered.
@@ -147,7 +150,7 @@ System overlays a text message (e.g., "VS Code Launched") on the webcam feed.
 
 User sees the feedback in real-time.
 
-6. Check Extended Fingers
+6. #### Check Extended Fingers
 Actor: System
 
 Description: The system checks which fingers are extended using get_extended_fingers.
@@ -160,7 +163,7 @@ System checks if each finger is extended using get_extended_fingers.
 
 System returns a dictionary of extended finger states.
 
-7. Detect Specific Gestures
+7. #### Detect Specific Gestures
 Actor: System
 
 Description: The system detects specific gestures (e.g., "V sign", "fist", "like") using gesture detection functions.
