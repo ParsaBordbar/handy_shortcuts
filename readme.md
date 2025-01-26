@@ -1,5 +1,12 @@
 # Handy_shortcuts 🖐️
 
+**Features**: Highlights the key functionalities.
+**Supported Gestures**: Lists gestures and their corresponding shortcuts.
+**How It Works**: Explains the workflow in simple terms.
+**Installation**: Provides clear steps to set up the project.
+**Configuration**: Explains how to customize gestures and shortcuts.
+
+
 Welcome to the **Handy_shortcuts**! This project allows you to control your computer using hand gestures, making it easier to launch applications, execute commands, and perform tasks without touching your keyboard or mouse. 
 I wanted it to be customable so feel free to custom it for own use cases!
 
@@ -19,15 +26,15 @@ I wanted it to be customable so feel free to custom it for own use cases!
 
 Here are the gestures currently supported by the system:
 
-| Gesture       | Description                          | Example Shortcut                 |
-|---------------|--------------------------------------|----------------------------------|
-| **Fist**      | All fingers closed                   | Open Terminal (`Ctrl + Alt + T`) |
-| **Peace Sign**| Index and middle fingers extended    | Open VS Code (`Win + 2`)         |
-| **One**       | Index finger extended                | Open Filesystem (`Win + 3`)      |
-| **Two**       | Index and middle fingers extended    | Open Spotify (`Win + 4`)         |
-| **Three**     | Index, middle, and ring fingers extended | Open Calculator (`Win + 5`)  |
-| **Four**      | All fingers extended                 | Open Notepad (`Win + 6`)         |
-| **Like**      | Thumb extended, other fingers closed | Like a video (`Ctrl + L`)        |
+| Gesture       | Description                             | Example Shortcut                 |
+|---------------|-----------------------------------------|----------------------------------|
+| **Fist**      | All fingers closed                      | Open Terminal (`Ctrl + Alt + T`) |
+| **Peace Sign**| Index and middle fingers extended       | Open VS Code (`Win + 2`)         |
+| **One**       | Index finger extended                   | Open Filesystem (`Win + 4`)      |
+| **Two**       | Index and middle fingers extended       | Open Spotify (`Win + 3`)         |
+| **Three**     | Index, middle, and ring fingers extended| Open Calculator (`Win + 5`)      |
+| **Four**      | All fingers extended                    | Change the Desktop (`Win + F1`)  |
+| **Like**      | Thumb extended, other fingers closed    | Screen Shot (`alt` + printsc)    |
 ---
 
 ## Installation 🚀
