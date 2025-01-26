@@ -3,6 +3,7 @@ import time
 from utils.extended_fingers import get_extended_fingers
 
 COOL_DOWN = 4
+last_action_time = 0
 
 def handle_gesture_action(gesture_detected, action, cool_down=True):
     global last_action_time
@@ -80,6 +81,17 @@ def is_like(hand_landmarks):
         extended['thumb'] and 
         not extended['index'] and 
         not extended['middle'] and
+        not extended['ring'] and 
+        not extended['pinky']
+    )
+
+def is_fu(hand_landmarks):
+    fingers = get_finger_data(hand_landmarks)
+    extended = get_extended_fingers(fingers)
+    return (
+        not extended['thumb'] and 
+        not extended['index'] and 
+        extended['middle'] and
         not extended['ring'] and 
         not extended['pinky']
     )
