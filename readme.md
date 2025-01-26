@@ -55,20 +55,23 @@ You can customize the gestures and shortcuts by editing the configs/shortcuts.py
 Copy
 shortcuts = [
     {
-        'hotkey': ('win', '1'),
-        'message': 'Google Chrome Launched',
-        'gesture': 'like'  # Triggered by thumbs-up gesture
-    },
-    {
-        'hotkey': ('win', '2'),
-        'message': 'VS Code Launched',
-        'gesture': 'peace'  # Triggered by peace sign
-    },
-    {
-        'hotkey': ('ctrl', 'alt', 't'),
-        'message': 'Terminal Launched',
-        'gesture': 'fist'  # Triggered by fist gesture
-    }
+shortcuts = [
+ {
+    # Mapped to gesture 4
+    'hotkey': ('Win', '4'),
+    'message': 'Filesystem Launched'
+ },
+ {
+    # Mapped to gesture Like!     
+    'hotkey': ('ctrl', 'alt', 't'),
+    'message': 'New Terminal'
+ },
+ {
+    # Mapped to gesture V! -> used for VS code!
+    'hotkey': ('Win', '2'),
+    'message': 'VS Code Launched'
+ },
+]
 ]
 ```
 
