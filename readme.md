@@ -54,8 +54,6 @@ You can customize the gestures and shortcuts by editing the configs/shortcuts.py
 ```python
 Copy
 shortcuts = [
-    {
-shortcuts = [
  {
     # Mapped to gesture 4
     'hotkey': ('Win', '4'),
@@ -71,7 +69,6 @@ shortcuts = [
     'hotkey': ('Win', '2'),
     'message': 'VS Code Launched'
  },
-]
 ]
 ```
 
