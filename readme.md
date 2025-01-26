@@ -1,5 +1,10 @@
 # Handy_shortcuts 🖐️
 
+
+https://github.com/user-attachments/assets/d340eb60-6723-4613-afb4-446b5702fd85
+
+
+
 **Features**: Highlights the key functionalities.
 **Supported Gestures**: Lists gestures and their corresponding shortcuts.
 **How It Works**: Explains the workflow in simple terms.
