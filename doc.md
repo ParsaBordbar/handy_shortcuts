@@ -83,7 +83,7 @@ PyAutoGUI --> System: Execute Shortcut
 System --> User: Perform Action (e.g., Open App)
 
 
-### Use Cases
+## Use Cases
 
 1. #### Detect Hand Gestures
 Actor: User
