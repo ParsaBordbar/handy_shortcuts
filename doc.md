@@ -98,6 +98,7 @@ System captures the frame and processes it using MediaPipe.
 
 System identifies hand landmarks and maps them to gestures using get_finger_data.
 
+
 2. #### Map Gestures to Shortcuts
 Actor: System
 
@@ -110,6 +111,7 @@ System detects a gesture (e.g., "V sign").
 System looks up the gesture in the gesture_to_shortcut mapping.
 
 System retrieves the associated shortcut.
+
 
 3. #### Trigger Shortcut Actions
 Actor: System
@@ -124,6 +126,7 @@ System uses PyAutoGUI to simulate the keyboard shortcut.
 
 System displays a confirmation message on the screen.
 
+
 4. #### Handle Cooldown
 Actor: System
 
@@ -136,6 +139,7 @@ System detects a gesture.
 System checks if the cooldown period has passed since the last action.
 
 If cooldown has passed, the system triggers the action and resets the timer.
+
 
 5. #### Display Feedback
 Actor: System
@@ -150,6 +154,7 @@ System overlays a text message (e.g., "VS Code Launched") on the webcam feed.
 
 User sees the feedback in real-time.
 
+
 6. #### Check Extended Fingers
 Actor: System
 
@@ -162,6 +167,7 @@ System retrieves finger landmarks using get_finger_data.
 System checks if each finger is extended using get_extended_fingers.
 
 System returns a dictionary of extended finger states.
+
 
 7. #### Detect Specific Gestures
 Actor: System
